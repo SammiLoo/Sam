@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEE Year3 (BEng)</title>
+    <link rel="stylesheet" href="style3.css">
+
+</head>
+
+<header>
+    <h1>Electrical and Electronic Engineering Year 3 (BEng)</h1>
+</header>
+
+<body>
+    <div class="Y3B" id="Y3B">
+    <form id="module" action="http://localhost/phpprogram/example.php" method="post">
+    <table class="EEEEY3B" style="width:70%">
+        <tr class="header_row">
+            <th colspan="8"><h2>Full Year</h2></th>
+        </tr>
+        <tr>
+            <th colspan="2">Code</th>
+            <th colspan="2">Title of Module</th>
+            <th colspan="2">Credits</th>
+            <th colspan="2">Status</th>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="checkbox" name="EEEE3026[]" class="fullyear" value="30">H53PJ3 (EEEE3026)</td>
+            <td colspan="2">Third Year Project</td>
+            <td colspan="2">30</td>
+            <td colspan="2">Compulsory</td>
+        </tr>
+        <tr>
+            <th colspan="4"><h3>Semester 1</h3></th>
+            <th colspan="4"><h3>Semester 2</h3></th>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <th>Title of Module</th>
+            <th>Credits</th>
+            <th>Status</th>
+            <th>Code</th>
+            <th>Title of Module</th>
+            <th>Credits</th>
+            <th>Status</th>            
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="EEEE3051[]" class="autumn" value="10">H63BPE (EEEE3051)</td>
+            <td>Business Planning for Engineers</td>
+            <td>10</td>
+            <td>Compulsory</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>            
+        </tr>
+        <tr style="background-color:gray">
+            <td colspan="8" style="text-align:left;"><b>Select a total of 50 credits of modules chose from groups 1, 2 and 3</b></td>
+        </tr>
+        <tr>
+            <td colspan="8" style="text-align:left;">Group 1: Select a minimum of 20 and a maximum of 30 credits from this group</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="group1a" class="autumn" value="10" onclick="require1()">H63END (EEEE3031)</td>
+            <td>Electronic Design</td>
+            <td>10</td>
+            <td>Group 1</td>
+            <td><input type="checkbox" name="group1b" class="spring" value="10" onclick="require1()">H63VLS (EEEE3032)</td>
+            <td>VLSI Design</td>
+            <td>10</td>
+            <td>Group 1</td>            
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="group1c" class="autumn" value="10" onclick="require1()">H63SSD (EEEE3030)</td>
+            <td>Solid State Devices</td>
+            <td>10</td>
+            <td>Group 1</td>
+            <td><input type="checkbox" name="group1d" class="spring" value="10" onclick="require1()">H63TCE (EEEE3033)</td>
+            <td>Telecommunication Electronics</td>
+            <td>10</td>
+            <td>Group 1</td>
+        </tr>   
+        <tr>
+            <td colspan="8" style="text-align:left;">Group 2: Select a minimum of 20 and a maximum of 30 credits from this group</td>
+        </tr> 
+        <tr>
+            <td><input type="checkbox" name="group2a" class="autumn" value="10" onclick="require2()">H63EMA (EEEE3034)</td>
+            <td>Electrical Machines</td>
+            <td>10</td>
+            <td>Group 2</td>
+            <td><input type="checkbox" name="group2b" class="spring" value="10" onclick="require2()">H63EDR (EEEE3036)</td>
+            <td>Energy Conversion for Motor and Generator Drives</td>
+            <td>10</td>
+            <td>Group 2</td>           
+        </tr>  
+        <tr>
+            <td><input type="checkbox" name="group2c" class="autumn" value="10" onclick="require2()">H63PED (EEEE3035)</td>
+            <td>Power Electronic Design</td>
+            <td>10</td>
+            <td>Group 2</td>
+            <td><input type="checkbox" name="group2d" class="spring" value="10" onclick="require2()">H63REN (EEEE3054)</td>
+            <td>Renewable Generation Technologies and Control</td>
+            <td>10</td>
+            <td>Group 2</td>
+        </tr>   
+        <tr>
+            <td><input type="checkbox" name="group2e" class="autumn" value="10" onclick="require2()">H63PNW (EEEE3044)</td>
+            <td>Power Networks</td>
+            <td>10</td>
+            <td>Group 2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>  
+        <tr>
+            <td colspan="8" style="text-align:left;">Group 3: Select a minimum of 0 and a maximum of 10 credits from this group</td>
+        </tr> 
+        <tr>
+            <td><input type="checkbox" name="group3a" class="autumn" value="10" onclick="require3()">H63CSD (EEEE3037)</td>
+            <td>Control System Design</td>
+            <td>10</td>
+            <td>Group 3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="group3b" class="autumn" value="10" onclick="require3()">H63FWA (EEEE3038)</td>
+            <td>Fields Waves and Antennas</td>
+            <td>10</td>
+            <td>Group 3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> 
+        <tr>
+            <td colspan="8" style="text-align:left;">Group 4: Select 20 credits from this group</td>
+        </tr>  
+        <tr>
+            <td><input type="checkbox" name=group4a class="autumn" id="checks" value="10" >H63DCM (EEEE3039)</td>
+            <td>Digital Communications</td>
+            <td>10</td>
+            <td>Group 4</td>
+            <td><input type="checkbox" name=group4b class="spring" value="10" >H63JAV (EEEE3029)</td>
+            <td>Web Based Computing</td>
+            <td>10</td>
+            <td>Group 4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name=group4c class="autumn" value="10" >H63ECH (EEEE3040)</td>
+            <td>Embedded Computing</td>
+            <td>10</td>
+            <td>Group 4</td>
+            <td><input type="checkbox" name=group4d class="spring" value="10" >H63VIC (EEEE3029)</td>
+            <td>Visual Information Computing</td>
+            <td>10</td>
+            <td>Group 4</td>
+        </tr> 
+        <tr>
+            <td colspan="8" style="text-align:left;"><h3>Additional Module Choice Information:</h3>Select a further 10 credits from Mathematics, Engineering, Computer Science or Business.<br>Module option choices cannot include modules containing a significant amount of material taught in modules taken in previous years.
+            <br>Note: Students must take 120 credits with at least 100 credits at level 3 or above.<br><br>
+            <select class="form-control" onchange="window.location.href=this.value;" style="width:60%;height:30px;font-size:15px;">
+                    <option selected>Additional module choice</option>
+                    <option value="https://mynottingham.nottingham.ac.uk/psp/psprd/EMPLOYEE/HRMS/c/UN_PROG_AND_MOD_EXTRACT.UN_PAM_CRSE_EXTRCT.GBL">Arts & Education (Foundation)</option>
+                    <option value="2">Biomedical Sciences</option>
+                    <option value="3">Biosciences</option>
+            </select>
+            <br><br>
+            <br>Module Code:<input type="text" name="code" style="width:30%;height:22px;font-size:15px;">
+            <br>Module Title     : <input type="text" name="title" style="width:50%;height:22px;font-size:15px;">
+            <br>Credits     :   <input type="checkbox" class="add_cred" name="add_cred" id="add_cred_Total" value="10" onclick="getAdd_Cred()" style="height:15px;font-size:15px;">10 credits    
+            </td>
+        </tr>
+                
+    </table>
+
+    <br><br>
+    <table>
+        <tr>
+            <th colspan="2"><h2>Total credits for current academic year</h2></th>
+        </tr>
+
+        <tr>
+            <th>Semester</th>
+            <th>Credits</th>
+        </tr>
+
+        <tr><div class="FullYearCredit">
+            <td><p style="font-size:15px">Full year: </p></td>
+            <td><span id="fullyearTotal">0</span></td>
+        </div></tr>
+
+        <tr><div class="AutumnCredit">
+            <td><p style="font-size:15px">Autumn: </p></td>
+            <td><span id="autumnTotal">0</span> </td>
+        </div></tr>
+
+        <tr><div class="SpringCredit">
+            <td><p style="font-size:15px">Spring: </p></td>
+            <td><span id="springTotal">0</span> </td>
+        </div></tr>
+
+        <tr><div class="grandTotalCredit">
+            <td><b><p style="font-size:18px">Total Credits: </b></p></td>
+            <td><b><span id="grandTotal">0</span></b></td>
+        </div></tr>
+
+    </table>
+    
+    <div id="totalAdd_Cred">0</div>
+    
+    <p><input type="submit" class="button" value="submit"/></p>
+
+    </form>
+    </div>
+
+    <script>  
+        var checkbox_full = document.getElementsByClassName('fullyear');     
+        var checkbox_aut = document.getElementsByClassName('autumn');
+        var checkbox_spr = document.getElementsByClassName('spring');
+        var FullYearTotal  = document.getElementById('fullyearTotal');
+        var AutumnTotal  = document.getElementById('autumnTotal');
+        var SpringTotal  = document.getElementById('springTotal');
+        const MAX_CRED_AUT_ = 60, MAX_CRED_SPR_ = 60;
+            
+            //"(this.checked ? 1 : -1);" this sees if checkbox is checked or unchecked   by adding or subtracting it (1 :-1)
+            //make sure that each checkbox total is added if its checked
+            for (var i=0; i < checkbox_full.length; i++) {
+                checkbox_full[i].onchange = function() {
+                
+                    var add_full = this.value * (this.checked ? 1 : -1);
+                    
+                    fullyearTotal.innerHTML = parseFloat(fullyearTotal.innerHTML) + add_full;
+                    grandTotal.innerHTML = parseFloat(fullyearTotal.innerHTML) + parseFloat(springTotal.innerHTML) + parseFloat(autumnTotal.innerHTML)+ parseFloat(document.getElementById('totalAdd_Cred').innerHTML);
+                }
+            }
+            for (var j=0; j < checkbox_aut.length; j++) {
+                checkbox_aut[j].onchange = function() {
+                  
+                    var add_aut = this.value * (this.checked ? 1 : -1);
+                    
+                    autumnTotal.innerHTML = parseFloat(autumnTotal.innerHTML) + add_aut;
+                    grandTotal.innerHTML = parseFloat(fullyearTotal.innerHTML) + parseFloat(springTotal.innerHTML) + parseFloat(autumnTotal.innerHTML)+ parseFloat(document.getElementById('totalAdd_Cred').innerHTML);
+                
+                    if(autumnTotal.innerHTML >= MAX_CRED_AUT_) 
+                    {
+                        alert("Please bare the responsibility of taking 60 credits in this semester");
+                    } 
+                    if(grandTotal.innerHTML > 120) 
+                    {
+                        alert("Please select only 120 credits");
+                    } 
+                }
+
+            }
+
+            for (var k=0; k < checkbox_spr.length; k++) {
+                checkbox_spr[k].onchange = function() {
+                
+                    var add_spr = this.value * (this.checked ? 1 : -1);
+                    
+                    springTotal.innerHTML = parseFloat(springTotal.innerHTML) + add_spr;
+                    grandTotal.innerHTML = parseFloat(fullyearTotal.innerHTML) + parseFloat(springTotal.innerHTML) + parseFloat(autumnTotal.innerHTML)+ parseFloat(document.getElementById('totalAdd_Cred').innerHTML);
+
+                    if(springTotal.innerHTML >= MAX_CRED_SPR_) 
+                    {
+                        alert("Please bare the responsibility of taking 60 credits in this Semester");
+                    } 
+                    if(grandTotal.innerHTML > 120) 
+                    {
+                        alert("Please select only 120 credits");
+                    } 
+                   
+                }
+            }
+            function getAdd_Cred()
+            {
+                //Here we get the total price by calling our function
+                //Each function returns a number so by calling them we add the values they return together
+                var theForm = document.forms["module"];
+                var add_cred = theForm.elements["add_cred"];
+                var howmany = 0;
+                if (add_cred.checked==true)
+                {
+                    howmany = 10;
+                }
+
+                //display the result
+                document.getElementById('totalAdd_Cred').innerHTML = howmany;
+                grandTotal.innerHTML = parseFloat(fullyearTotal.innerHTML) + parseFloat(springTotal.innerHTML) + parseFloat(autumnTotal.innerHTML) + parseFloat(document.getElementById('totalAdd_Cred').innerHTML);
+
+            }
+
+    </script>
+ 
+    <script type="text/javascript">
+
+        function require1()
+        {
+            //Here we get the total price by calling our function
+            //Each function returns a number so by calling them we add the values they return together
+            var theForm = document.forms["module"];
+            var group1a = theForm.elements["group1a"];
+            var group1b = theForm.elements["group1b"];
+            var group1c = theForm.elements["group1c"];
+            var group1d = theForm.elements["group1d"];
+            var checkbox_grp1 = 0;
+            const MAX_CHECK_1 = 3;
+            if (group1a.checked==true)
+            {
+                checkbox_grp1++;
+                if(checkbox_grp1 > MAX_CHECK_1 ) 
+                {
+                    alert("Please select maximum 30 credits from Group 1");
+                    // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+            }
+            if (group1b.checked==true)
+            {
+                checkbox_grp1++;
+                if(checkbox_grp1 > MAX_CHECK_1 ) 
+                {
+                    alert("Please select maximum 30 credits from Group 1");
+                    // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+            }
+            if (group1c.checked==true)
+            {
+                checkbox_grp1++;
+                if(checkbox_grp1 > MAX_CHECK_1 ) 
+                {
+                    alert("Please select maximum 30 credits from Group 1");
+                    // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+            }
+            if (group1d.checked==true)
+            {
+                checkbox_grp1++;
+                if(checkbox_grp1 > MAX_CHECK_1 ) 
+                {
+                    alert("Please select maximum 30 credits from Group 1");
+                    // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+            }
+        }   
+
+        function require2()
+        {
+            //Here we get the total price by calling our function
+            //Each function returns a number so by calling them we add the values they return together
+            var theForm = document.forms["module"];
+            var group2a = theForm.elements["group2a"];
+            var group2b = theForm.elements["group2b"];
+            var group2c = theForm.elements["group2c"];
+            var group2d = theForm.elements["group2d"];
+            var group2e = theForm.elements["group2e"];
+            var checkbox_grp2 = 0;
+            const MAX_CHECK_2 = 3;
+            if (group2a.checked==true)
+            {
+                checkbox_grp2++;
+                if(checkbox_grp2 > MAX_CHECK_2 ) 
+                {
+                    alert("Please select maximum 30 credits from Group 2");
+                    // group2a.checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+            }
+            if (group2b.checked==true)
+            {
+                checkbox_grp2++;
+                if(checkbox_grp2 > MAX_CHECK_2 ) 
+                {
+                    alert("Please select maximum 30 credits from Group 2");
+                    // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+            }
+            if (group2c.checked==true)
+            {
+                checkbox_grp2++;
+                if(checkbox_grp2 > MAX_CHECK_2 ) 
+                {
+                    alert("Please select maximum 30 credits from Group 2");
+                    // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+            }
+            if (group2d.checked==true)
+            {
+                checkbox_grp2++;
+                if(checkbox_grp2 > MAX_CHECK_2 ) 
+                {
+                    alert("Please select maximum 30 credits from Group 2");
+                    // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+            }
+            if (group2e.checked==true)
+            {
+                checkbox_grp2++;
+                if(checkbox_grp2 > MAX_CHECK_2 ) 
+                {
+                    alert("Please select maximum 30 credits from Group 2");
+                    // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+            }
+
+        }   
+
+        function require3()
+        {
+            //Here we get the total price by calling our function
+            //Each function returns a number so by calling them we add the values they return together
+            var theForm = document.forms["module"];
+            var group3a = theForm.elements["group3a"];
+            var group3b = theForm.elements["group3b"];
+            var checkbox_grp3 = 0;
+            const MAX_CHECK_3 = 1;
+            if (group3a.checked==true)
+            {
+                checkbox_grp3++;
+                if(checkbox_grp3 > MAX_CHECK_3 ) 
+                {
+                    alert("Please select maximum 10 credits from Group 3");
+                    // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+
+            }
+            if (group3b.checked==true)
+            {
+                checkbox_grp3++;
+                if(checkbox_grp3 > MAX_CHECK_3 ) 
+                {
+                    alert("Please select maximum 10 credits from Group 3");
+                    // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+                }
+
+            }
+
+        }   
+
+        // function blah1(){
+
+        //     var allInp1 = document.getElementsByName('group1[]');
+        //     const MAX_CHECK_1 = 3; /*How many checkbox could be checked*/
+        //     var nbChk1 =0;
+        //     for(var p= 0; p<allInp1.length; p++)
+        //     {
+        //         if(allInp1[p].type.toLowerCase()=='checkbox' && allInp1[p].checked) /*OR
+        //         if(allInp[i].type.toLowerCase()=='checkbox' && allInp[i].checked===true) */
+        //         {   
+                   
+        //             nbChk1++;
+                    
+        //             if(nbChk1 > MAX_CHECK_1 ) 
+        //             {
+        //                 alert("Please select maximum 30 credits from Group 1");
+        //                 // allInp1[p].checked=false; /* try to Unchek the current checkbox :'(  */
+        //             }
+
+        //         }
+        //     }
+        // }
+
+        function blah2(){
+
+            var allInp2 = document.getElementsByName('group2[]');
+            const MAX_CHECK_2 = 3; /*How many checkbox could be checked*/
+            var nbChk2 =0;
+            for(var q= 0; q<allInp2.length; q++)
+            {
+                if(allInp2[q].type.toLowerCase()=='checkbox' && allInp2[q].checked) /*OR
+                if(allInp[i].type.toLowerCase()=='checkbox' && allInp[i].checked===true) */
+                {   
+                
+                    nbChk2++;
+                    
+                    if(nbChk2 > MAX_CHECK_2 ) 
+                    {
+                        alert("Please select maximum 30 credits from Group 2");
+                        // allInp2[q].checked=false; /* try to Unchek the current checkbox :'(  */
+                    }
+
+                }
+            }
+              
+        }
+        // function blah3(){
+
+        //     var allInp3 = document.getElementsByName('group3[]');
+        //     // var allInp_3b = document.getElementsByName('group3b');
+        //     const MAX_CHECK_3 = 1; /*How many checkbox could be checked*/
+        //     var nbChk3 =0;
+
+        //     for(var r= 0; r<allInp3.length; r++)
+        //     {
+        //         if(allInp3[r].type.toLowerCase()=='checkbox' && allInp3[r].checked) /*OR
+        //         if(allInp[i].type.toLowerCase()=='checkbox' && allInp[i].checked===true) */
+        //         {   
+                
+        //             nbChk3++;
+                    
+        //             if(nbChk3 > MAX_CHECK_3 ) 
+        //             {
+        //                 alert("Please select maximum 10 credits from Group 3");
+        //                 // allInp3[r].checked=false; /* try to Unchek the current checkbox :'(  */
+        //             }
+
+        //         }                    
+        //     }
+        // }
+        
+        
+    </script>    
+
+
+</body>
+
+</html>

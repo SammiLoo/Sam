@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add/Drop Form</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    </head>
+
+    
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">The University of Nottingham</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                          
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Shortcut Link
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://moodle.nottingham.ac.uk/my/">Moodle</a>
+                                <a class="dropdown-item" href="https://bluecastle.nottingham.ac.uk/Account/Login?ReturnUrl=%2f">Blue Castle</a>
+                                <a class="dropdown-item" href="https://mynottingham.nottingham.ac.uk/psp/psprd/EMPLOYEE/EMPL/h/?tab=UN_IH_GUEST_MALAYSIA">MyNottingham</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://adfs.nottingham.edu.my/adfs/ls/?client-request-id=ed8692cf-e778-4624-8365-a64d47b21751&username=&wa=wsignin1.0&wtrealm=urn%3afederation%3aMicrosoftOnline&wctx=estsredirect%3d2%26estsrequest%3drQIIAY2RvWsTYQDG8_bSsw1CqwgKCnbopFzu3ve-Dzokl1zMR3NJTZrEJeQ-kzR3b3p3-VwFcSzi1MGhg0PGTiL-BUWwg1N3URRBnBxNcHHTZ3j4Tc_wex4QMAmVXeZPELVqinEcSJn2iv5KcDOx_eHFs-_Tz7vaU_v1fu78dvUU3PBxFPV8t9vxkrY1SnqzBbjfjaJhqNA0HkUDjI-S2HF6pp00sUfjSYd-A8AlAIs1UWAFUYRIkHgk8RJCArPcsCELTYsyeBFRnMDzlMGJxpIgZxkOL1ucdbW2padGURetCge9uf1zbdPBgdce4jA6JV6BTCsqZfC-q6XU7rgViocF1VHlvCinDNcWmCPseulyAGUW5b1w6uu5Ulgrc6VKQTfC1hDVZv5xf1zRiqg5yFZLfj5Tr85q7iDqH2iFEVMdlDuPm416NjOUrQqcW3qfC6ZFPSc1wrFvc5TW7gsNtq2mXbXptbieLNapbPORFmCroTuTBfFfws8JcmnMw_4FQeKh7fesyzj4Gr_OEMrGRmI7die2E_sVB2fry2O-nb38eO9TKvNOuft-b4uNXazT6ryotwpZjZfpsf7QF2WnieiaeTg56A94M3SsKReM0XE1nZ_sIQWekOCEJL-Q4AcJnl-Lvd3814tXiVuIgRIFIcUIO1BSOFFh0ZPf0">Email</a>
+                            </div>
+                        </li>
+                                
+                    </ul>
+
+                    <ul class="navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Logout</a>
+                        </li>
+                    </ul>
+                              
+                </div>
+            </nav>
+        </header>
+
+
+    <body>   
+
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ol>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#" aria-current="page"> Add/Drop Form</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="userInput">
+            <h2>User information</h2>
+            <form action="http://localhost/phpprogram/Y3bengform.php" method="POST" autocomplete="on">
+                <input type="text" placeholder="Student ID" name="student_ID" required>
+                <input type="text" placeholder="Full Name" name="fullname" required>
+                <input type="text" placeholder="Nottingham Email" name="email" required>
+                <input type="text" placeholder="Department" name="department" required>
+                <input type="text" placeholder="Year" name="year_stud" required>
+                <input type="text" placeholder="Meng/Beng" name="meng_beng" required>
+                <input type="text" placeholder="Contact Number" name="contact_num" required>
+                <input type="text" placeholder="Tutor" name="tutor" required>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!--JQuery-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!--Optional JS--> 
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+    </body>
+</html>

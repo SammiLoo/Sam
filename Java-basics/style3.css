@@ -1,0 +1,58 @@
+body {
+    background: rgb(170, 190, 199);
+    font-family: sans-serif;
+    font-size: 10pt;
+}
+
+header {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse:  collapse;
+    opacity: 0.95;
+    margin: auto;
+}
+
+th, td {
+    padding: 7px 15px;
+}
+
+td {
+    text-align: right;
+}
+
+.form-control {
+    font-family: sans-serif;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+#totalAdd_Cred {
+    display: none;
+}
+
+.button {
+    background-color: rgb(99, 99, 170);
+    border: 2px solid rgb(42, 42, 134);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-family: sans-serif;
+    width: 30%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.button:hover {
+    background-color: white;
+    color: rgb(99, 99, 170);
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEE Year3 (MEng)</title>
+    <link rel="stylesheet" href="style5.css">
+
+</head>
+
+<header>
+    <h1>Electrical and Electronic Engineering Year 3 (MEng)</h1>
+</header>
+
+<body>
+    <div class="Y3M" id="Y3M">
+    <form id="form_Y3M" action="http://localhost/phpprogram/Y3Meng.php" method="post">
+    <table class="EEEEY3M" style="width:70%">
+        <tr class="header_row">
+            <th colspan="8"><h2>Full Year</h2></th>
+        </tr>
+        <tr>
+            <th colspan="2">Code</th>
+            <th colspan="2">Title of Module</th>
+            <th colspan="2">Credits</th>
+            <th colspan="2">Status</th>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="checkbox" name="EEEE4062[]" class="fullyear_Y3M" value="30" onclick="calculateTotal_Y3M()">H54GP4 (EEEE4062)</td>
+            <td colspan="2">Group Project</td>
+            <td colspan="2">30</td>
+            <td colspan="2">Compulsory</td>
+        </tr>
+        <tr>
+            <th colspan="4"><h3>Semester 1</h3></th>
+            <th colspan="4"><h3>Semester 2</h3></th>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <th>Title of Module</th>
+            <th>Credits</th>
+            <th>Status</th>
+            <th>Code</th>
+            <th>Title of Module</th>
+            <th>Credits</th>
+            <th>Status</th>            
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="EEEE3037[]" class="autumn_Y3M" value="10" onclick="calculateTotal_Y3M()">H63CSD (EEEE3037)</td>
+            <td>Control Systems Design</td>
+            <td>10</td>
+            <td>Compulsory</td>
+            <td><input type="checkbox" name="EEEE4061[]" class="spring_Y3M" value="10" onclick="calculateTotal_Y3M()">H64IND (EEEE4061)</td>
+            <td>Industrial Awareness</td>
+            <td>10</td>
+            <td>Compulsory</td>            
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="EEEE3038[]" class="autumn_Y3M" value="10" onclick="calculateTotal_Y3M()">H63CSD (EEEE3037)</td>
+            <td>Fields Waves and Antennas</td>
+            <td>10</td>
+            <td>Compulsory</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="8" style="text-align:left;">Group 1: Select 10 credits from this group</td>
+        </tr> 
+        <tr>
+            <td><input type="checkbox" name="g1_Y3M[]" class="autumn_Y3M" value="10" onclick="restriction1_Y3M()">HG3MOD (MATH3032)</td>
+            <td>Advanced Mathematical Techniques in Ordinary Differential Equations for Engineers</td>
+            <td>10</td>
+            <td>Group 1</td>
+            <td><input type="checkbox" name="g1_Y3M[]" class="spring_Y3M" value="10" onclick="restriction1_Y3M()">HG4MPD (MATH4071)</td>
+            <td>Mathematical Techniques in Partial Differential Equations for Engieers</td>
+            <td>10</td>
+            <td>Group 1</td>           
+        </tr>  
+        <tr>
+            <td><input type="checkbox" name="g1_Y3M[]" class="autumn_Y3M" value="10" onclick="restriction1_Y3M()">HG4MEM (MATH4073)</td>
+            <td>Mathematics for Engineering Management</td>
+            <td>10</td>
+            <td>Group 1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr style="background-color:gray">
+            <td colspan="8" style="text-align:left;"><b>Select a total of 50 credits from groups 2, 3 and 4</b></td>
+        </tr>
+        <tr>
+            <td colspan="8" style="text-align:left;">Group 2: Select a minimum of 20 and a maximum of 30 credits from this group</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="g2_Y3M[]" class="autumn_Y3M" value="10" onclick="restriction2_Y3M()">H63END (EEEE3031)</td>
+            <td>Electronic Design</td>
+            <td>10</td>
+            <td>Group 2</td>
+            <td><input type="checkbox" name="g2_Y3M[]" class="spring_Y3M" value="10" onclick="restriction2_Y3M()">H63VLS (EEEE3032)</td>
+            <td>VLSI Design</td>
+            <td>10</td>
+            <td>Group 2</td>            
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="g2_Y3M[]" class="autumn_Y3M" value="10" onclick="restriction2_Y3M()">H63SSD (EEEE3030)</td>
+            <td>Solid State Devices</td>
+            <td>10</td>
+            <td>Group 2</td>
+            <td><input type="checkbox" name="g2_Y3M[]" class="spring_Y3M" value="10" onclick="restriction2_Y3M()">H63TCE (EEEE3033)</td>
+            <td>Telecommunication Electronics</td>
+            <td>10</td>
+            <td>Group 2</td>
+        </tr>   
+        <tr>
+            <td colspan="8" style="text-align:left;">Group 3: Select a minimum of 20 and a maximum of 30 credits from this group</td>
+        </tr> 
+        <tr>
+            <td><input type="checkbox" name="g3_Y3M[]" class="autumn_Y3M" value="10" onclick="restriction3_Y3M()">H63EMA (EEEE3034)</td>
+            <td>Electrical Machines</td>
+            <td>10</td>
+            <td>Group 3</td>
+            <td><input type="checkbox" name="g3_Y3M[]" class="spring_Y3M" value="10" onclick="restriction3_Y3M()">H63EDR (EEEE3036)</td>
+            <td>Energy Conversion for Motor and Generator Drives</td>
+            <td>10</td>
+            <td>Group 3</td>           
+        </tr>  
+        <tr>
+            <td><input type="checkbox" name="g3_Y3M[]" class="autumn_Y3M" value="10" onclick="restriction3_Y3M()">H63PED (EEEE3035)</td>
+            <td>Power Electronic Design</td>
+            <td>10</td>
+            <td>Group 3</td>
+            <td><input type="checkbox" name="g3_Y3M[]" class="spring_Y3M" value="10" onclick="restriction3_Y3M()">H63REN (EEEE3054)</td>
+            <td>Renewable Generation Technologies and Control</td>
+            <td>10</td>
+            <td>Group 3</td>
+        </tr>   
+        <tr>
+            <td><input type="checkbox" name="g3_Y3M[]" class="autumn_Y3M" value="10" onclick="restriction3_Y3M()">H63PNW (EEEE3044)</td>
+            <td>Power Networks</td>
+            <td>10</td>
+            <td>Group 3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>   
+        <tr>
+            <td colspan="8" style="text-align:left;">Group 4: Select a minimum of 0 and a maximum of 10 credits from this group</td>
+        </tr>  
+        <tr>
+            <td><input type="checkbox" name=g4_Y3M[] class="autumn_Y3M" value="10" onclick="restriction4_Y3M()">H63DCM (EEEE3039)</td>
+            <td>Digital Communications</td>
+            <td>10</td>
+            <td>Group 4</td>
+            <td><input type="checkbox" name=g4_Y3M[] class="spring_Y3M" value="10" onclick="restriction4_Y3M()">H63JAV (EEEE3029)</td>
+            <td>Web Based Computing</td>
+            <td>10</td>
+            <td>Group 4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name=g4_Y3M[] class="autumn_Y3M" value="10" onclick="restriction4_Y3M()">H63ECH (EEEE3040)</td>
+            <td>Embedded Computing</td>
+            <td>10</td>
+            <td>Group 4</td>
+            <td><input type="checkbox" name=g4_Y3M[] class="spring_Y3M" value="10" onclick="restriction4_Y3M()">H63VIC (EEEE3029)</td>
+            <td>Visual Information Computing</td>
+            <td>10</td>
+            <td>Group 4</td>
+        </tr> 
+        <tr>
+            <td colspan="8" style="text-align:left;">Summer semester</td>
+        </tr>  
+        <tr>
+            <td>H13IDT (ENGR3001)</td>
+            <td>Industrial Training</td>
+            <td>0</td>
+            <td>Compulsory</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="8" style="text-align:left;">Additional Choice information for Year 3 (MEng ONLY)<br>All MEng Electrial & Electronic Engineering students in the Malaysia Campus must satisfy both of the following module requirements:</td>
+        </tr>  
+        <tr>
+            <td colspan="8" style="text-align:left;">(i)<input type="checkbox">EEEE3036(Energy Conversion for Motor and Generator Drives) or <input type="checkbox">{EEEE3034(Electrical Machines) and EEEE3035(Power Electronic Design)}</td>
+        </tr>
+        <tr>
+            <td colspan="8" style="text-align:left;">(ii)<input type="checkbox">EEEE3044(Power Networks) or <input type="checkbox">{EEEE4078(High Voltage Engineering)}</td>
+        </tr>
+
+    </table>
+    
+    <br><br><br>
+    <table>
+        <tr>
+            <th colspan="2"><h2>Total credits for current academic year</h2></th>
+        </tr>
+
+        <tr>
+            <th>Semester</th>
+            <th>Credits</th>
+        </tr>
+
+        <tr><div class="FullYearCredit_Y3M">
+            <td><p style="font-size:15px">Full year: </p></td>
+            <td><span id="fullyearTotal_Y3M">0</span></td>
+        </div></tr>
+
+        <tr><div class="AutumnCredit_Y3M">
+            <td><p style="font-size:15px">Autumn: </p></td>
+            <td><span id="autumnTotal_Y3M">0</span> </td>
+        </div></tr>
+
+        <tr><div class="SpringCredit_Y3M">
+            <td><p style="font-size:15px">Spring: </p></td>
+            <td><span id="springTotal_Y3M">0</span> </td>
+        </div></tr>
+
+        <tr><div class="grandTotalCredit_Y3M">
+            <td><b><p style="font-size:18px">Total Credits: </b></p></td>
+            <td><b><span id="grandTotal_Y3M">0</span></b></td>
+        </div></tr>
+
+    </table>
+    
+    <p><input type="submit" class="button" value="submit"/></p>
+
+    </form>
+    </div>
+
+    <script>  
+        var cb_full_Y3M = document.getElementsByClassName('fullyear_Y3M');     
+        var cb_aut_Y3M = document.getElementsByClassName('autumn_Y3M');
+        var cb_spr_Y3M = document.getElementsByClassName('spring_Y3M');
+        var FullYearTotal_Y3M  = document.getElementById('fullyearTotal_Y3M');
+        var AutumnTotal_Y3M  = document.getElementById('autumnTotal_Y3M');
+        var SpringTotal_Y3M  = document.getElementById('springTotal_Y3M');
+        const MAX_CRED_AUT_Y3M = 60, MAX_CRED_SPR_Y3M = 60;
+
+                    
+            //"(this.checked ? 1 : -1);" this sees if checkbox is checked or unchecked   by adding or subtracting it (1 :-1)
+            //make sure that each checkbox total is added if its checked
+            for (var i=0; i < cb_full_Y3M.length; i++) {
+                cb_full_Y3M[i].onchange = function() {
+                
+                    var add_full_Y3M = this.value * (this.checked ? 1 : -1);
+                    
+                    fullyearTotal_Y3M.innerHTML = parseFloat(fullyearTotal_Y3M.innerHTML) + add_full_Y3M;
+                    grandTotal_Y3M.innerHTML = parseFloat(fullyearTotal_Y3M.innerHTML) + parseFloat(springTotal_Y3M.innerHTML) + parseFloat(autumnTotal_Y3M.innerHTML) 
+                }
+            }
+            for (var j=0; j < cb_aut_Y3M.length; j++) {
+                cb_aut_Y3M[j].onchange = function() {
+                  
+                    var add_aut_Y3M = this.value * (this.checked ? 1 : -1);
+                    
+                    autumnTotal_Y3M.innerHTML = parseFloat(autumnTotal_Y3M.innerHTML) + add_aut_Y3M;
+                    grandTotal_Y3M.innerHTML = parseFloat(fullyearTotal_Y3M.innerHTML) + parseFloat(springTotal_Y3M.innerHTML) + parseFloat(autumnTotal_Y3M.innerHTML)
+                
+                    if(autumnTotal_Y3M.innerHTML >= MAX_CRED_AUT_Y3M) 
+                    {
+                        alert("Please bare the responsibility of taking 60 credits in this semester");
+                    } 
+                    if(grandTotal_Y3M.innerHTML > 120) 
+                    {
+                        alert("Please select only 120 credits");
+                    } 
+                }
+
+            }
+
+            for (var k=0; k < cb_spr_Y3M.length; k++) {
+                cb_spr_Y3M[k].onchange = function() {
+                
+                    var add_spr_Y3M = this.value * (this.checked ? 1 : -1);
+                    
+                    springTotal_Y3M.innerHTML = parseFloat(springTotal_Y3M.innerHTML) + add_spr_Y3M;
+                    grandTotal_Y3M.innerHTML = parseFloat(fullyearTotal_Y3M.innerHTML) + parseFloat(springTotal_Y3M.innerHTML) + parseFloat(autumnTotal_Y3M.innerHTML)
+
+                    if(springTotal_Y3M.innerHTML >= MAX_CRED_SPR_Y3M) 
+                    {
+                        alert("Please bare the responsibility of taking 60 credits in this Semester");
+                    } 
+                    if(grandTotal_Y3M.innerHTML > 120) 
+                    {
+                        alert("Please select only 120 credits");
+                    } 
+                   
+                }
+            }
+    </script>
+
+    <script type="text/javascript">
+        function restriction2_Y3M(){
+
+            var allInp = document.getElementsByName('g2_Y3M[]');
+            const MAX_CHECK_1 = 3; /*How many checkbox could be checked*/
+            var nbChk =0;
+            for(var i= 0; i<allInp.length; i++)
+            {
+                if(allInp[i].type.toLowerCase()=='checkbox' && allInp[i].checked) /*OR
+                if(allInp[i].type.toLowerCase()=='checkbox' && allInp[i].checked===true) */
+                {   
+                   
+                    nbChk++;
+                    
+                    if(nbChk > MAX_CHECK_1 ) 
+                    {
+                        alert("Please select maximum 30 credits from Group 2");
+                        allInp[i].checked=false; /* try to Unchek the current checkbox :'(  */
+                    }
+
+                }
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function restriction3_Y3M(){
+
+            var allInp = document.getElementsByName('g3_Y3M[]');
+            const MAX_CHECK_2 = 3; /*How many checkbox could be checked*/
+            var nbChk =0;
+            for(var i= 0; i<allInp.length; i++)
+            {
+                if(allInp[i].type.toLowerCase()=='checkbox' && allInp[i].checked) /*OR
+                if(allInp[i].type.toLowerCase()=='checkbox' && allInp[i].checked===true) */
+                {   
+                
+                    nbChk++;
+                    
+                    if(nbChk > MAX_CHECK_2 ) 
+                    {
+                        alert("Please select maximum 30 credits from Group 3");
+                        allInp[i].checked=false; /* try to Unchek the current checkbox :'(  */
+                    }
+
+                }
+            }
+        }
+    </script> 
+    
+    <script type="text/javascript">
+        function restriction4_Y3M(){
+
+            var allInp = document.getElementsByName('g4_Y3M[]');
+            // var allInp_3b = document.getElementsByName('group3b');
+            const MAX_CHECK_3 = 1; /*How many checkbox could be checked*/
+            var nbChk =0;
+
+            for(var i= 0; i<allInp.length; i++)
+            {
+                if(allInp[i].type.toLowerCase()=='checkbox' && allInp[i].checked) /*OR
+                if(allInp[i].type.toLowerCase()=='checkbox' && allInp[i].checked===true) */
+                {   
+                
+                    nbChk++;
+                    
+                    if(nbChk > MAX_CHECK_3 ) 
+                    {
+                        alert("Please select maximum 10 credits from Group 4");
+                        allInp[i].checked=false; /* try to Unchek the current checkbox :'(  */
+                    }
+
+                }
+            }
+        }
+    </script> 
+</body>
+</html>

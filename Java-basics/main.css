@@ -1,0 +1,35 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+/* index.html */
+.myPanel {
+    border: 1px ridge #135178;
+    border-radius: 5px;
+    /* --x y blur color-- */
+    box-shadow: 0px 0px 4px #ccc;
+    margin: 3%;
+}
+
+ .myPanel .heading {
+     background: #226894;
+     border-radius: 5px 5px 0px 0px;
+     color: white;
+     padding: 10px 20px; 
+}
+
+    .myPanel .body {
+        padding: 10px 20px;
+    }
+
+    .myPanel .showOnHover {
+        display: none;
+    }
+
+    .myPanel:hover {
+        box-shadow: 0px 0px 10px black;
+        border: 0px solid #135178;
+    }
+
+    .myPanel:hover .showOnHover {
+        display: inline-block;    
+    }
+
